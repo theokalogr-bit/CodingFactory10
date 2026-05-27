@@ -4,13 +4,17 @@ package gr.aueb.cf.ch7;
  * Δημιουργήστε μία μέθοδο, που να παίρνει ως είσοδο
  * ένα string και ένα char και να επιστρέφει το πλήθος των
  * εμφανίσεων του char στο string.
- *
  * s[2] -> s.char(2)
  */
 
 public class LetterCount {
 
     public static void main(String[] args) {
+
+        String s = "Alice";
+        char letter = 'e';
+
+        System.out.println(getLetterCount(s, letter));
 
     }
 
