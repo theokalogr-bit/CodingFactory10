@@ -3,7 +3,7 @@ services:
     image: mysql:8.0   # MySQL 8.0 image
     container_name: bankapp-dev-db
     environment:
-      MYSQL_ROOT_PASSWORD: "${ΜΥSQL_ROOT_PASSWORD}"  # Root password from .env file
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"  # Root password from .env file
       MYSQL_DATABASE: "${MYSQL_DATABASE:-bankdb}"   # Database name from .env file or default to bank_db
       MYSQL_USER: "${MYSQL_USER:-bankuser}"         # Database user from .env file or default to bank_user
       MYSQL_PASSWORD: "${MYSQL_PASSWORD}"            # Database user password from .env file
