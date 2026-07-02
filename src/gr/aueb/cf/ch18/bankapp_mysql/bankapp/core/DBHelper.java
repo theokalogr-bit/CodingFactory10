@@ -12,20 +12,23 @@ public class DBHelper {
     static {
         HikariConfig config = new HikariConfig();
 
-
-
         // Config DB
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/bankdbdev?sslMode=preferred&serverTimezone=UTC&allowPublicKeyRetrieval=true");
-        config.setUsername("bankuser10");
-        config.setPassword("Ante123456!");
+//        config.setJdbcUrl("jdbc:mysql://localhost:3306/bankdbdev" +
+//                "?sslMode=preferred&serverTimeZone=UTC&allowPublicKeyRetrieval=true");
+//        config.setUsername("bankuser10");
+//        config.setPassword("C0d1ngF@");
+
+        config.setJdbcUrl("jdbc:mysql://localhost:3307/bankdb" +
+                "?sslMode=preferred&serverTimeZone=UTC&allowPublicKeyRetrieval=true");
+        config.setUsername("bank_user");              // MYSQL_USER
+        config.setPassword("C0d1ngF@");         // MYSQL_PASSWORD
 
         datasource = new HikariDataSource(config);
     }
 
-    private DBHelper(){}
+    private DBHelper() {}
 
     public static Connection getConnection() throws SQLException {
         return datasource.getConnection();
     }
-
 }
